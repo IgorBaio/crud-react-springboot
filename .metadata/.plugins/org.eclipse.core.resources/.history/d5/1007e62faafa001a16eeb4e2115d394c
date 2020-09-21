@@ -1,0 +1,104 @@
+package br.com.erudio.modal;
+
+import java.sql.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="tb_produto")
+public class Produto {
+	@Id
+	 @GeneratedValue(strategy=GenerationType.IDENTITY)
+	 @Column
+	 private Integer id;
+	
+	@Column
+	private String nome;
+	
+	@Column
+	private String descricao;
+	
+	@Column
+	private String codigoBarras;
+	
+	@Column
+	private String categoria;
+	
+	@Column
+	private Integer quantidade;
+	
+	/*
+	 * create table tb_produto (`id` int(20) not null auto_increment
+	 * ,`nome` varchar(255) DEFAULT NULL,
+	 * `codigo_barras` varchar(255) DEFAULT NULL, 
+	 * `descricao` varchar(255) DEFAULT NULL
+	 * ,`categoria` varchar(255) DEFAULT NULL
+	 * ,`quantidade` int(20) DEFAULT NULL
+	 * , PRIMARY KEY (`id`));
+	 * */
+	
+	
+	
+	@Override
+	 public String toString() {
+	  return "Produto [id= " + id + ", nome=" + nome + ", descricao=" + descricao+ ", categoria=" + categoria + ", codigo de barras="
+	    + codigoBarras + "quantidade="
+	    	    + quantidade + "]";
+	 }
+
+	public Integer getId() {
+		return id;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public String getCodigoBarras() {
+		return codigoBarras;
+	}
+
+	public String getCategoria() {
+		return categoria;
+	}
+
+	public Integer getQuantidade() {
+		return quantidade;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
+	public void setCodigoBarras(String codigoBarras) {
+		this.codigoBarras = codigoBarras;
+	}
+
+	public void setCategoria(String categoria) {
+		this.categoria = categoria;
+	}
+
+	public void setQuantidade(Integer quantidade) {
+		this.quantidade = quantidade;
+	}
+	
+	
+
+}

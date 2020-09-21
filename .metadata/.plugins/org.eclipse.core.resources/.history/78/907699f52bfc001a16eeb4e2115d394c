@@ -1,0 +1,28 @@
+package br.com.baiosystems.testes;
+
+import static org.junit.Assert.*;
+
+import org.junit.Assert;
+import org.junit.Test;
+import org.springframework.http.HttpStatus;
+
+import br.com.baiosystems.controller.ProdutoController;
+import br.com.baiosystems.modal.Produto;
+import br.com.baiosystems.service.ProdutoService;
+import br.com.baiosystems.service.ProdutoServiceImp;
+
+public class CreateTest {
+
+	@Test
+	public void test() {
+		ProdutoServiceImp pc = new ProdutoServiceImp();
+		Produto prod = new Produto();
+		prod.setCategoria("Categoria teste");
+		prod.setCodigoBarras("111222333");
+		prod.setDescricao("Descricao de teste");
+		prod.setNome("Produto teste");
+		prod.setQuantidade(2);
+		Assert.assertEquals("Caso 1",prod);
+	}
+
+}

@@ -1,0 +1,36 @@
+package br.com.erudio.dao;
+
+import java.util.List;
+
+import org.springframework.stereotype.Repository;
+
+import br.com.erudio.modal.Produto;
+
+@Repository
+public class ProdutoDAOImp implements ProdutoDAO {
+
+	@Override
+	public List<Produto> getItens() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Produto getItem(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void save(Produto produto) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void delete(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,13 @@
+package br.com.erudio.service;
+
+import java.util.List;
+
+import br.com.baiosystems.modal.Employee;
+
+public interface EmployeeService {
+	
+	List<Employee> get();
+	Employee get(int id);
+	void save(Employee employee);
+	void delete(int id);
+}

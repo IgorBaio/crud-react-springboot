@@ -1,0 +1,5 @@
+package br.com.erudio.controller;
+
+public class ProdutoController {
+
+}

@@ -1,0 +1,15 @@
+package br.com.erudio.dao;
+
+import java.util.List;
+
+import br.com.erudio.modal.Produto;
+
+public interface ProdutoDAO {
+	List<Produto> getItens();
+	
+	Produto getItem(int id);
+	
+	void save(Produto produto);
+	
+	void delete(int id);
+}
