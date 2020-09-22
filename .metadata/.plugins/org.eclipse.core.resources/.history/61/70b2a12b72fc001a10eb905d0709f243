@@ -27,7 +27,7 @@ public class ApiTest {
 	}
 		
 	@Test
-	public void getCategoryByItem() {
+	public void getAnCategoryByItem() {
 		Produto pc = produtoController.getItem(7);
 		Produto resultadoEsperado = new Produto();
 		resultadoEsperado.setCategoria("telefonia");
