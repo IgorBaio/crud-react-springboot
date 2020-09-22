@@ -47,25 +47,16 @@ const useStyles = makeStyles(theme => ({
    header:{
       fontWeight:"bold",
       backgroundColor: "#CCC",
-      // boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
-      borderStyle: 'solid',
-      borderWidth:3,
-      borderColor:"#000"
+      boxShadow: '0 3px 5px 2px rgba(120, 120, 120, .3)',
    }
  }));
  
 
 export default function SimpleTable() {
    const classes = useStyles();
-   const [message, setMessage] = useState("Nothing saved in the session");
    const [data, updateData] = useState([]);
    const [firstLoad, setLoad] = useState(true);
    let isLoading = true;
-   const [nome, setNome] = useState("");
-   const [codigoBarras, setCodigoBarras] = useState("");
-   const [descricao, setDescricao] = useState("");
-   const [categoria, setCategoria] = useState("");
-   const [quantidade, setQuantidade] = useState("");
 
    async function getProdutos(){
       let response = await fetch('/api/produto');
