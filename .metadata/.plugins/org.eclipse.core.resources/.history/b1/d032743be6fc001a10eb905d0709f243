@@ -78,7 +78,7 @@ public class ApiTest {
 	@Test
 	public void removeAnItem_Sucess() {
 		Produto produtoRemovido = new Produto();
-		produtoRemovido = produtoController.getItem(21);
+		produtoRemovido = produtoController.getItem(16);
 		
 		Integer id = produtoController.getItem(produtoRemovido.getId()).getId();
 		

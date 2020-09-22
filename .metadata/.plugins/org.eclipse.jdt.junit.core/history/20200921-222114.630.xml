@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="ApiTest" project="Crud" tests="6" started="6" failures="0" errors="0" ignored="0">
+  <testsuite name="br.com.baiosystems.testes.ApiTest" time="0.848">
+    <testcase name="getQuantityByItem" classname="br.com.baiosystems.testes.ApiTest" time="0.767"/>
+    <testcase name="getNameByItem" classname="br.com.baiosystems.testes.ApiTest" time="0.014"/>
+    <testcase name="getAnCategoryByItem" classname="br.com.baiosystems.testes.ApiTest" time="0.013"/>
+    <testcase name="getDescriptionByItem" classname="br.com.baiosystems.testes.ApiTest" time="0.027"/>
+    <testcase name="controllerLoads" classname="br.com.baiosystems.testes.ApiTest" time="0.006"/>
+    <testcase name="getBarCodeByItem" classname="br.com.baiosystems.testes.ApiTest" time="0.021"/>
+  </testsuite>
+</testrun>

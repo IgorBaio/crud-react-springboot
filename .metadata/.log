@@ -261,3 +261,6 @@ java.lang.RuntimeException
 
 !ENTRY org.eclipse.jdt.debug 2 0 2020-09-21 21:39:06.596
 !MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
+
+!ENTRY org.eclipse.jdt.debug 2 0 2020-09-22 09:53:32.642
+!MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread

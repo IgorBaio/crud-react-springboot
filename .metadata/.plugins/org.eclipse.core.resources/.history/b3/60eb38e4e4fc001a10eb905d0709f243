@@ -25,7 +25,21 @@ public class ApiTest {
 	public void controllerLoads() throws Exception {
 		assertThat(produtoController).isNotNull();
 	}
-	
+		
+	@Test
+	public void getCategoryByItem() {
+		Produto pc = produtoController.getItem(7);
+		Produto resultadoEsperado = new Produto();
+		resultadoEsperado.setCategoria("telefonia");
+		resultadoEsperado.setCodigoBarras("80986645");
+		resultadoEsperado.setDescricao("uso pessoal");
+		
+		resultadoEsperado.setId(7);
+		resultadoEsperado.setQuantidade(1);
+		resultadoEsperado.setNome("Smartphone");
+		
+		assertThat(pc.getCategoria()).isEqualTo(resultadoEsperado.getCategoria());
+	}
 	
 	@Test
 	public void getItem() {
@@ -69,7 +83,7 @@ public class ApiTest {
 		
 		Produto produtoRetornado = new Produto();
 		produtoRetornado = produtoController.getItem(id);
-		produtoRetornado.setQuantidade(31);
+		produtoRetornado.setQuantidade(30);
 		produtoRetornado = produtoController.update(produtoRetornado);
 		
 		assertThat(produtoRetornado.getQuantidade()).isNotEqualTo(produto.getQuantidade());
@@ -78,7 +92,7 @@ public class ApiTest {
 	@Test
 	public void removeAnItem_Sucess() {
 		Produto produtoRemovido = new Produto();
-		produtoRemovido = produtoController.getItem(21);
+		produtoRemovido = produtoController.getItem(16);
 		
 		Integer id = produtoController.getItem(produtoRemovido.getId()).getId();
 		

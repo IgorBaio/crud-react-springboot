@@ -69,7 +69,7 @@ public class ApiTest {
 		
 		Produto produtoRetornado = new Produto();
 		produtoRetornado = produtoController.getItem(id);
-		produtoRetornado.setQuantidade(31);
+		produtoRetornado.setQuantidade(30);
 		produtoRetornado = produtoController.update(produtoRetornado);
 		
 		assertThat(produtoRetornado.getQuantidade()).isNotEqualTo(produto.getQuantidade());
@@ -78,7 +78,7 @@ public class ApiTest {
 	@Test
 	public void removeAnItem_Sucess() {
 		Produto produtoRemovido = new Produto();
-		produtoRemovido = produtoController.getItem(21);
+		produtoRemovido = produtoController.getItem(16);
 		
 		Integer id = produtoController.getItem(produtoRemovido.getId()).getId();
 		
