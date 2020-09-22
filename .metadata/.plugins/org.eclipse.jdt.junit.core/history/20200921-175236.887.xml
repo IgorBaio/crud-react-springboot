@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="CreateTest" project="Crud" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="br.com.baiosystems.testes.CreateTest" incomplete="true">
-    <testcase name="test" classname="br.com.baiosystems.testes.CreateTest" incomplete="true"/>
-  </testsuite>
-</testrun>

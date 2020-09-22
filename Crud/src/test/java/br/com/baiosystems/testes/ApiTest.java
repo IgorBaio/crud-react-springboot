@@ -46,6 +46,7 @@ public class ApiTest {
 	
 	@Test
 	public void getItem() {
+		
 //		ProdutoController pc = new ProdutoController();
 //		Produto prod = new Produto();
 //		prod.setCategoria("Categoria teste");
@@ -65,5 +66,47 @@ public class ApiTest {
 		
 		
 	}
+	
+	@Test
+	public void getAnItem() {
+		Produto pc = produtoController.getItem(7);
+		Produto resultadoEsperado = new Produto();
+		resultadoEsperado.setCategoria("telefonia");
+		resultadoEsperado.setCodigoBarras("80986645");
+		resultadoEsperado.setDescricao("uso pessoal");
+		
+		resultadoEsperado.setId(7);
+		resultadoEsperado.setQuantidade(1);
+		resultadoEsperado.setNome("Smartphone");
+		assertSame(resultadoEsperado, pc);
+	}
+	
+	@Test
+	public void getAnItem2() {
+		Produto pc = produtoController.getItem(7);
+		Produto resultadoEsperado = new Produto();
+		resultadoEsperado.setCategoria("telefonia");
+		resultadoEsperado.setCodigoBarras("80986645");
+		resultadoEsperado.setDescricao("uso pessoal");
+		
+		resultadoEsperado.setId(7);
+		resultadoEsperado.setQuantidade(1);
+		resultadoEsperado.setNome("Smartphone");
+		assertEquals(resultadoEsperado, pc);
+	}
+/*
+ * java.lang.AssertionError: expected: br.com.baiosystems.modal.Produto<Produto 
+ * [id= 5,
+ *  nome=Fone,
+ *   descricao=Com abafador anti-ruído,
+ *    categoria=Audio, 
+ * codigo de barras=1930813750quantidade=2]> but was: br.com.baiosystems.modal.Produto<Produto 
+ * [id= 5, 
+ * nome=Fone, 
+ * descricao=Com abafador anti-ruído, 
+ * categoria=Audio, codigo de barras=1930813750quantidade=2]>
+	
 
+ * 
+ * */
 }
